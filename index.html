@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Las Valkyrie Resource Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+*{box-sizing:border-box;margin:0;padding:0}:root{--p900:#4c0070;--p800:#5b0e8c;--p700:#7414ad;--p600:#9021d1;--p500:#a52ff0;--p400:#bd5cf5;--p300:#d79bf9;--p100:#f2e2fc;--p50:#faf1ff}body{font-family:"Poppins","Segoe UI",Arial,sans-serif;background:var(--p100);color:#3a0d5c}.main-nav{display:flex;gap:8px;background:var(--p900);padding:10px 20px}.main-tab{background:transparent;border:none;color:var(--p300);padding:10px 18px;border-radius:8px;cursor:pointer;font-weight:600;font-size:15px;font-family:inherit}.main-tab.active,.main-tab:hover{background:var(--p600);color:#fff}.page{display:none}.page.active{display:block}.shop-header{background:linear-gradient(135deg,var(--p500),var(--p800));padding:30px 20px;text-align:center;color:white}.shop-header h1{font-size:32px;margin-bottom:20px;font-weight:700}.category-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}.cat-btn{background:rgba(255,255,255,.18);border:none;color:white;padding:8px 18px;border-radius:20px;cursor:pointer;font-size:14px;font-family:inherit}.cat-btn.active,.cat-btn:hover{background:white;color:var(--p700);font-weight:600}.shop-notes{margin:20px 25px 0;background:var(--p50);border:1px solid var(--p300);border-left:5px solid var(--p600);border-radius:10px;padding:16px 20px;box-shadow:0 4px 12px rgba(144,33,209,.12)}.shop-notes h3{color:var(--p700);font-size:15px;margin-bottom:8px}.shop-notes ul{padding-left:20px;font-size:13.5px;line-height:1.7;color:#4a1170}.shop-body{display:flex;gap:25px;padding:25px;align-items:flex-start}.product-grid{flex:1;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}.product-card{background:var(--p50);border:1px solid var(--p300);border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(144,33,209,.18);display:flex;flex-direction:column}.product-thumb{background:linear-gradient(135deg,var(--p400),var(--p600));height:130px;display:flex;align-items:center;justify-content:center;font-size:40px}.product-info{padding:14px 16px;display:flex;flex-direction:column;gap:8px}.product-info h3{font-size:16px;color:var(--p900)}.product-info .price{color:var(--p600);font-weight:700;font-size:15px}.add-btn{margin-top:4px;background:var(--p600);border:none;color:white;padding:10px;border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit}.add-btn:hover{background:var(--p700)}.cart-panel{width:300px;background:var(--p50);border:1px solid var(--p300);border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(144,33,209,.18);position:sticky;top:20px}.cart-panel h2{color:var(--p600);font-size:20px;margin-bottom:16px;border-bottom:2px solid var(--p100);padding-bottom:10px}.cart-panel label{display:block;font-size:13px;font-weight:600;color:var(--p600);margin:10px 0 4px}.cart-panel input:not(.qty-input),.cart-panel textarea{width:100%;padding:8px 10px;border:1px solid var(--p300);background:#fffbff;border-radius:8px;font-size:14px;font-family:inherit;resize:none}.cart-items{margin-top:14px;max-height:260px;overflow-y:auto}.empty-cart{color:#a884c9;font-style:italic;font-size:14px;text-align:center;padding:10px 0}.cart-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--p100);font-size:13px}.cart-item-info{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}.cart-item-name{font-weight:600;color:var(--p900)}.cart-item-subtotal{font-size:12px;color:#6b3fa0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cart-item-subtotal strong{color:var(--p600)}.cart-item-controls{display:flex;align-items:center;gap:6px;flex-shrink:0}.qty-input{width:40px;flex-shrink:0;height:22px;border:1px solid var(--p300);border-radius:5px;text-align:center;font-size:12px;font-family:inherit;color:var(--p900);padding:0}.qty-input::-webkit-inner-spin-button,.qty-input::-webkit-outer-spin-button{opacity:1}.cart-item-controls button{width:22px;height:22px;border:none;background:var(--p100);border-radius:5px;cursor:pointer;font-weight:700;color:var(--p700)}.cart-item-controls button:hover{background:var(--p300)}.remove-btn{color:#c0392b;background:none;border:none;cursor:pointer;font-size:14px;margin-left:4px}.cart-total{display:flex;justify-content:space-between;font-weight:700;font-size:16px;margin:16px 0;padding-top:10px;border-top:1px dashed var(--p300);color:var(--p900)}.checkout-btn{width:100%;padding:12px;border:none;border-radius:8px;background:var(--p600);color:white;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}.checkout-btn:disabled{background:#d9c3ea;cursor:not-allowed}.checkout-btn:not(:disabled):hover{background:var(--p700)}.checkout-btn.loading{opacity:.7;pointer-events:none}.checkout-status{margin-top:10px;font-size:13px;text-align:center}.checkout-status.success{color:#2e8b57}.checkout-status.error{color:#c0392b}.guide-body{padding:25px}.guide-section{display:none}.guide-section.active{display:block}.guide-note{background:var(--p100);border-left:4px solid var(--p500);padding:12px 16px;border-radius:6px;font-size:14px;margin-bottom:18px;color:var(--p800)}.guide-table{width:100%;border-collapse:collapse;background:var(--p50);border:1px solid var(--p300);border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(144,33,209,.18)}.guide-table th,.guide-table td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--p100);font-size:14px}.guide-table th{background:var(--p600);color:white}.class-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.class-card{background:var(--p50);border:1px solid var(--p300);border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(144,33,209,.18)}.class-card h3{background:var(--p600);color:white;padding:10px 16px;font-size:15px}.class-card ol{list-style:decimal;padding:12px 16px 14px 32px;font-size:13.5px;line-height:1.7;color:var(--p900)}
+</style>
+</head>
+<body>
+<div class="main-nav">
+ <button class="main-tab active" data-page="shop">Shop</button>
+ <button class="main-tab" data-page="guide">Guide</button>
+</div>
+<div id="page-shop" class="page active">
+ <header class="shop-header">
+ <h1>Las Valkyrie Resource Shop</h1>
+ <div class="category-tabs" id="categoryTabs">
+ <button class="cat-btn active" data-cat="semua">All</button>
+ <button class="cat-btn" data-cat="senjata">Weapon</button>
+ <button class="cat-btn" data-cat="peluru">Ammo</button>
+ <button class="cat-btn" data-cat="vest">Vest</button>
+ <button class="cat-btn" data-cat="drugs">Drug</button>
+ <button class="cat-btn" data-cat="attachment">Attachment</button>
+ <button class="cat-btn" data-cat="tools">Tool</button>
+ </div>
+ </header>
+ <div class="shop-notes">
+ <h3>📌 Notes Pemesanan</h3>
+ <ul>
+ <li>Setiap pembelian wajib setor <strong>100 Metal Scrap</strong> (MS nanti dibeli brankas).</li>
+ <li>Untuk senjata <strong>Class 3</strong> wajib <strong>preorder sebelum hari Sabtu</strong>.</li>
+ <li><strong>Cocaine</strong> dan <strong>Vest Biru</strong> dibatasi maksimal <strong>10 pcs per minggu</strong>.</li>
+ </ul>
+ </div>
+ <div class="shop-body">
+ <div class="product-grid" id="productGrid"></div>
+ <aside class="cart-panel">
+ <h2>Keranjang Belanja</h2>
+ <label for="namaPemesan">Nama Pemesan *</label>
+ <input type="text" id="namaPemesan" placeholder="Masukkan nama Anda" />
+ <label for="catatan">Catatan Tambahan (Opsional)</label>
+ <textarea id="catatan" rows="3" placeholder="Masukkan catatan tambahan"></textarea>
+ <div class="cart-items" id="cartItems"><p class="empty-cart">Keranjang belanja kosong</p></div>
+ <div class="cart-total"><span>Total:</span><span id="cartTotal">$0</span></div>
+ <button id="checkoutBtn" class="checkout-btn" disabled>Checkout</button>
+ <p id="checkoutStatus" class="checkout-status"></p>
+ </aside>
+ </div>
+</div>
+<div id="page-guide" class="page">
+ <header class="shop-header">
+ <h1>Guide</h1>
+ <div class="category-tabs" id="guideTabs">
+ <button class="cat-btn active" data-guide="attachment">Rekomendasi Attachment</button>
+ <button class="cat-btn" data-guide="ammo">Ammo per Senjata</button>
+ <button class="cat-btn" data-guide="class">Kelas Senjata</button>
+ </div>
+ </header>
+ <div class="guide-body">
+ <div class="guide-section active" id="guide-attachment">
+ <p class="guide-note">Catatan: rekomendasi di bawah ini opsional.</p>
+ <table class="guide-table"><thead><tr><th>Senjata</th><th>Rekomendasi Attachment</th></tr></thead><tbody id="attachmentGuideBody"></tbody></table>
+ </div>
+ <div class="guide-section" id="guide-ammo">
+ <p class="guide-note">Sesuaikan ammo dengan senjata yang dipakai.</p>
+ <table class="guide-table"><thead><tr><th>Senjata</th><th>Ammo yang Dipakai</th></tr></thead><tbody id="ammoGuideBody"></tbody></table>
+ </div>
+ <div class="guide-section" id="guide-class">
+ <p class="guide-note">Beberapa senjata belum tersedia.</p>
+ <div class="class-grid" id="classGuideGrid"></div>
+ </div>
+ </div>
+</div>
+<script>
+const PRODUCTS={senjata:{label:"Weapon",icon:"🔫",items:[{name:"Pistol Kacang",price:9e3},{name:"Pistol .50",price:12e3},{name:"Ceramic Pistol",price:34e3},{name:"X17 Modular",price:34e3},{name:"Mini SMG",price:45e3},{name:"Micro SMG",price:45e3},{name:"Navy Revolver",price:73e3},{name:"KVR",price:8e4},{name:"Pump Shotgun",price:1e5},{name:"Revolver Black",price:102e3},{name:"Virtus Rifle",price:27e4},{name:"Assault Rifle",price:225e3},{name:"Carbine Rifle",price:35e4}]},peluru:{label:"Ammo",icon:"📦",items:[{name:"Ammo .380 / Clip",price:2e3},{name:"Ammo .50 / Clip",price:2e3},{name:"Ammo 9mm / Clip",price:6e3},{name:"Ammo .44 / Clip",price:5e3},{name:"Ammo .45 ACP / Clip",price:5e3},{name:"Ammo 12 Gauge / Clip",price:1e4},{name:"Ammo 5.56mm / Clip",price:15e3},{name:"Ammo 7.76mm / Clip",price:1e4}]},vest:{label:"Vest",icon:"🦺",items:[{name:"Vest Merah (Armor 50%)",price:2e3},{name:"Vest Biru (Armor 90%)",price:5e3}]},drugs:{label:"Drug",icon:"🌿",items:[{name:"Weed Bag",price:400},{name:"Cocaine",price:1500},{name:"Opium",price:2500},{name:"Meth Bag",price:650}]},attachment:{label:"Attachment",icon:"🔧",items:[{name:"Tactical Flashlight",price:4500},{name:"Suppressor",price:15e3},{name:"Tactical Suppressor",price:15e3},{name:"Grip",price:4500},{name:"Extended Pistol Clip",price:4500},{name:"Extended SMG Clip",price:7500},{name:"Medium Scope",price:4500},{name:"Extended Rifle Clip",price:22500},{name:"SMG Drum",price:15e3},{name:"Rifle Drum",price:3e4},{name:"Macro Scope",price:4500},{name:"Medium Scope",price:25e3},{name:"Modern Suppressor",price:25e3},{name:"Modern Extended",price:25e3}]},tools:{label:"Tool",icon:"⚙️",items:[{name:"Lockpick",price:5e3}]}};
+const CLASS_GUIDE=[{title:"Class 1",weapons:["Pistol .50","Ceramic Pistol","X17 Modular","Machine Pistol","ST84 Skulln Sword","MX18 Classyblue"]},{title:"Class 2",weapons:["Mini SMG","Micro SMG","SMG","Navy Revolver","KVR","Pump Shotgun","Revolver Black","Sawn Off Shotgun","SDR7","VTN33 Graveshift"]},{title:"Class 3",weapons:["Double Action","Assault Rifle","Carbine Rifle","MB47","AGC","BK12","Dragon","Scarl Godzilla","AK47 Purplefunk","AKT","Foolv2 RED","M6A9 Diamond Soul","Scarl Rusty","M4 T Neon","Integrale"]}];
+const AMMO_GUIDE=[{weapon:"Pistol Kacang",ammo:"Ammo .380"},{weapon:"Pistol .50",ammo:"Ammo .50"},{weapon:"Ceramic Pistol",ammo:"Ammo 9mm"},{weapon:"X17 Modular",ammo:"Ammo 9mm"},{weapon:"Mini SMG",ammo:"Ammo 9mm"},{weapon:"Micro SMG",ammo:"Ammo 9mm"},{weapon:"Navy Revolver",ammo:"Ammo .44"},{weapon:"KVR",ammo:"Ammo .45 ACP"},{weapon:"Pump Shotgun",ammo:"Ammo 12 Gauge"},{weapon:"Revolver Black",ammo:"Ammo .44"},{weapon:"Virtus Rifle",ammo:"Ammo 5.56mm"},{weapon:"Assault Rifle",ammo:"Ammo 7.76mm"},{weapon:"Carbine Rifle",ammo:"Ammo 5.56mm"}];
+const ATTACHMENT_GUIDE=[{weapon:"Vektor KVR",rec:"Tactical Suppressor, Grip"},{weapon:"X17",rec:"Holo Scope, Modern Suppressor, Modern Extended"},{weapon:"Pistol .50",rec:"Tactical Suppressor, Extended Pistol Clip"},{weapon:"Machine Pistol",rec:"SMG Drum, Suppressor"},{weapon:"Mini SMG",rec:"Extended SMG Clip"},{weapon:"Micro SMG",rec:"Tactical Suppressor, Tactical Flashlight, Extended SMG Clip, Macro Scope"},{weapon:"SMG",rec:"SMG Drum, Suppressor, Tactical Flashlight, Macro Scope"},{weapon:"Shotgun",rec:"Tactical Suppressor, Tactical Flashlight"},{weapon:"Carbine",rec:"Extended Rifle Clip, Rifle Drum, Medium Scope, Grip, Tactical Suppressor"},{weapon:"AK",rec:"Tactical Flashlight, Grip, Rifle Drum, Extended Rifle Clip, Macro Scope, Tactical Suppressor"},{weapon:"Ceramic Pistol",rec:"Extended Pistol Clip, Suppressor"},{weapon:"Virtus",rec:"Tactical Flashlight, Extended Rifle Clip"}];
+let cart=[];
+const pg=document.getElementById("productGrid");
+function renderProducts(c="semua"){pg.innerHTML="";const cats=c==="semua"?Object.keys(PRODUCTS):[c];cats.forEach(k=>{PRODUCTS[k].items.forEach(i=>{const d=document.createElement("div");d.className="product-card";d.innerHTML='<div class="product-thumb">'+PRODUCTS[k].icon+'</div><div class="product-info"><h3>'+i.name+'</h3><span class="price">$'+i.price.toLocaleString("en-US")+'</span><button class="add-btn">Tambah ke Keranjang</button></div>';d.querySelector(".add-btn").addEventListener("click",()=>addToCart(i.name,i.price));pg.appendChild(d)})})}
+function addToCart(n,p){const e=cart.find(c=>c.name===n);e?e.qty+=1:cart.push({name:n,price:p,qty:1});renderCart()}
+function changeQty(n,d){const i=cart.find(c=>c.name===n);if(!i)return;i.qty+=d;if(i.qty<=0)cart=cart.filter(c=>c.name!==n);renderCart()}
+function setQty(n,v){const i=cart.find(c=>c.name===n);if(!i)return;const q=parseInt(v,10);if(!q||q<=0)cart=cart.filter(c=>c.name!==n);else i.qty=q;renderCart()}
+function removeFromCart(n){cart=cart.filter(c=>c.name!==n);renderCart()}
+const ci=document.getElementById("cartItems"),ct=document.getElementById("cartTotal"),cb=document.getElementById("checkoutBtn"),cs=document.getElementById("checkoutStatus"),np=document.getElementById("namaPemesan");
+function renderCart(){if(cart.length===0)ci.innerHTML='<p class="empty-cart">Keranjang belanja kosong</p>';else ci.innerHTML=cart.map(i=>{const s=i.price*i.qty;return'<div class="cart-item"><div class="cart-item-info"><span class="cart-item-name">'+i.name+'</span><span class="cart-item-subtotal">$'+i.price.toLocaleString("en-US")+' x <strong>'+i.qty+'</strong> = $'+s.toLocaleString("en-US")+'</span></div><div class="cart-item-controls"><button onclick="changeQty(\''+i.name.replace(/'/g,"\\'")+'\',-1)">-</button><input type="number" class="qty-input" min="1" value="'+i.qty+'" onchange="setQty(\''+i.name.replace(/'/g,"\\'")+'\',this.value)"><button onclick="changeQty(\''+i.name.replace(/'/g,"\\'")+'\',1)">+</button><button class="remove-btn" onclick="removeFromCart(\''+i.name.replace(/'/g,"\\'")+'\')">×</button></div></div>'}).join("");const t=cart.reduce((s,i)=>s+i.price*i.qty,0);ct.textContent="$"+t.toLocaleString("en-US");updateState()}
+function updateState(){cb.disabled=!(np.value.trim().length>0&&cart.length>0)}
+np.addEventListener("input",updateState);
+cb.addEventListener("click",async()=>{const n=np.value.trim(),c=document.getElementById("catatan").value.trim();if(!n||!cart.length)return;cb.disabled=true;cb.classList.add("loading");cb.textContent="Mengirim...";cs.textContent="";cs.className="checkout-status";try{const r=await fetch("/api/checkout",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({namaPemesan:n,catatan:c,items:cart.map(i=>({name:i.name,price:i.price,qty:i.qty,subtotal:i.price*i.qty})),total:cart.reduce((s,i)=>s+i.price*i.qty,0)})});if(!r.ok){const e=await r.json().catch(()=>({}));throw new Error(e.error||"Server error "+r.status)}cs.textContent="✅ Order berhasil dikirim ke Discord!";cs.className="checkout-status success";cart=[];document.getElementById("catatan").value="";np.value="";renderCart()}catch(e){cs.textContent="❌ Gagal: "+e.message;cs.className="checkout-status error"}finally{cb.disabled=false;cb.classList.remove("loading");cb.textContent="Checkout"}});
+document.querySelectorAll(".cat-btn[data-cat]").forEach(b=>{b.addEventListener("click",()=>{document.querySelectorAll(".cat-btn[data-cat]").forEach(bb=>bb.classList.remove("active"));b.classList.add("active");renderProducts(b.dataset.cat)})});
+document.querySelectorAll(".main-tab").forEach(b=>{b.addEventListener("click",()=>{document.querySelectorAll(".main-tab").forEach(bb=>bb.classList.remove("active"));document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));b.classList.add("active");document.getElementById("page-"+b.dataset.page).classList.add("active")})});
+document.querySelectorAll(".cat-btn[data-guide]").forEach(b=>{b.addEventListener("click",()=>{document.querySelectorAll(".cat-btn[data-guide]").forEach(bb=>bb.classList.remove("active"));document.querySelectorAll(".guide-section").forEach(s=>s.classList.remove("active"));b.classList.add("active");document.getElementById("guide-"+b.dataset.guide).classList.add("active")})});
+document.getElementById("attachmentGuideBody").innerHTML=ATTACHMENT_GUIDE.map(r=>'<tr><td>'+r.weapon+'</td><td>'+r.rec+'</td></tr>').join("");
+document.getElementById("ammoGuideBody").innerHTML=AMMO_GUIDE.map(r=>'<tr><td>'+r.weapon+'</td><td>'+r.ammo+'</td></tr>').join("");
+document.getElementById("classGuideGrid").innerHTML=CLASS_GUIDE.map(c=>'<div class="class-card"><h3>'+c.title+'</h3><ol>'+c.weapons.map(w=>'<li>'+w+'</li>').join("")+'</ol></div>').join("");
+renderProducts("semua");renderCart();
+</script>
+</body>
+</html>
